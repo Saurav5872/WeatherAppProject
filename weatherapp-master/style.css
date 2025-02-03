@@ -1,0 +1,168 @@
+
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #e0e0e0;
+  color: #707070;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-rounded {
+  border-radius: 2em;
+}
+
+.back-card {
+  border-radius: 20px !important;
+  padding: 20px;
+  background: #fff;
+}
+
+.city-name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.city-name p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.city-name span {
+  font-weight: 400;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.temp span {
+  font-weight: 100;
+  font-size: 4rem;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+.card-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.condition {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.high::before, .low::before {
+  content: '';
+  background-size: cover;
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+}
+
+.high::before {
+  background: url('img/up.svg') no-repeat;
+}
+
+.low::before {
+  background: url('img/down.svg') no-repeat;
+}
+
+.icon-container {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.icon-container img {
+  max-width: 60%;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  gap: 10px;
+}
+
+.card-bottom span {
+  font-size: 0.9rem;
+}
+
+.card-bottom p {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .temp span {
+    font-size: 3rem;
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-bottom p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .temp span {
+    font-size: 2.5rem;
+  }
+
+  .card-bottom p {
+    font-size: 1.8rem;
+  }
+
+  .card-mid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
